@@ -15,3 +15,6 @@ PUT - request updates an existing resource
 DELETE - request delets a resource from the web server
 
 ### Create nodemon
+
+### Add the other url
+Add value url and display in browser through construct new const and call it in 'write(JSON.stringify()' 
