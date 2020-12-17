@@ -5,3 +5,5 @@ Go to nodejs.org and download nodejs
 
 ### Add file package.json
 Create new folder and accepted all steps
+
+### Create index.js
