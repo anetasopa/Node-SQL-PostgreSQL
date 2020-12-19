@@ -18,4 +18,18 @@ app.get('/fortunes', (req, res) => {
     res.json(fortunes);
 })
 
+app.get('/fortunes/random', (req, res) => {
+    // const random_index = Math.floor(Math.random() * fortunes.length);
+    // const r_fortune = fortunes[random_index];
+    //
+    // res.json(r_fortune)
+
+    res.json(fortunes[Math.floor(Math.random() * fortunes.length)])
+})
+
+app.get('/fortunes/random/:id', (req, res) => {
+    // find -> function witch find specific element with individual argument
+    res.json(fortunes.find(f => f.id == req.params.id));
+})
+
 module.exports = app;
