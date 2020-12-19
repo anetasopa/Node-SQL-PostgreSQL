@@ -2,7 +2,6 @@
 const express = require('express');
 const fortunes = require('./fortunes_api.json')
 
-const port = 3000;
 // app -> function with express application witch we can configuration
 const app = express();
 
@@ -19,5 +18,4 @@ app.get('/fortunes', (req, res) => {
     res.json(fortunes);
 })
 
-// listen -> function listening
-app.listen(port, () => console.log(`Listening on port ${port}`));
+module.exports = app;
