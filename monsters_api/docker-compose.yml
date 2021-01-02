@@ -1,0 +1,32 @@
+version: '2'
+
+services:
+
+  monsters_api:
+    container_name: 'monsters_api'
+    image: node:12
+    ports:
+      - 127.0.0.1:3000:3000
+    volumes:
+      - '${API_DIRECTORY}/:/api'
+    tty: true
+    environment:
+      DB_HOST: monsters_db
+      PASSWORD: ''
+    depends_on:
+      - "monsters_db"
+    links:
+      - monsters_db
+
+  monsters_db:
+    image: "postgres:11"
+    container_name: "monsters_db"
+    environment:
+      POSTGRES_HOST_AUTH_METHOD: trust
+    ports:
+      - "54320:5432"
+    volumes:
+      - monsters_db_data:/var/lib/postgresql/data
+
+volumes:
+  monsters_db_data:
