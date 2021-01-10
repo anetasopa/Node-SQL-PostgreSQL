@@ -6,6 +6,9 @@
 
 example: docker `exec -it monsters_api bash`
 
+### Start all computers
+`docker-compose up`
+
 #### Show 
 `cat` index.js 
 
