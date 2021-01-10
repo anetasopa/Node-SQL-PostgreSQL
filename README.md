@@ -1,6 +1,6 @@
-# Node-SQL-PostgreSQL
+### Node-SQL-PostgreSQL
 
-#### Installing node
+### Installing node
 Go to nodejs.org and download nodejs
 
 ### Add file package.json
