@@ -17,7 +17,7 @@ Create new folder and accepted all steps
 ### Create nodemon
 
 ### Add the other url
-Add value url and display in browser through construct new const and call it in 'write(JSON.stringify()'
+Add value url and display in browser through construct new const and call it in `write(JSON.stringify())`
 
 ### Make a new folder
 _mkdir_ fortunes_api
