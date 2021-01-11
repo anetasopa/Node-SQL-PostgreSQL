@@ -30,7 +30,7 @@ _mkdir_ fortunes_api
 
 ### Problem in terminal
 `Error response from daemon: Container 05dd24f381acbec75dc6594bbfcbe574a1c888d2bb3e15545218ac5e49d6cd0e is not running`
-Must do: 
+
 ```
 docker ps
 docker-compose up 
