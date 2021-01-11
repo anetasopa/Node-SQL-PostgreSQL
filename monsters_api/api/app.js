@@ -16,8 +16,8 @@ app.get('/monsters', (request, response, next) => {
 });
 
 app.get('/monsters/:id', (request, response, next) => {
-    console.log('/monsters:id');
     const { id } = request.params;
+
     pool.query('SELECT * FROM monsters WHERE id = $1',
         [id],
         (err, res) => {
@@ -37,6 +37,20 @@ app.post('/monsters', (request, response, next) => {
 
         response.json({message: 'One row added to DB'});
     });
+});
+
+app.put('/monsters/:id', (request, response, next) => {
+    const { id } = request.params;
+    const { name, personality } = request.body;
+
+    pool.query('UPDATE monsters Set name=($1), personality=($2 WHERE id=($3)',
+        [name, personality, id],
+        (err, res) => {
+            if (err) return next(err);
+
+            response.json(res.rows);
+        }
+    );
 });
 
 const port = 3000;

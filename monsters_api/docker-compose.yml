@@ -4,7 +4,7 @@ services:
 
   monsters_api:
     container_name: 'monsters_api'
-    image: node:12
+    image: node:15
     ports:
       - 127.0.0.1:3000:3000
     volumes:
@@ -19,7 +19,7 @@ services:
       - monsters_db
 
   monsters_db:
-    image: "postgres:11"
+    image: postgres:11
     container_name: "monsters_db"
     environment:
       POSTGRES_HOST_AUTH_METHOD: trust
